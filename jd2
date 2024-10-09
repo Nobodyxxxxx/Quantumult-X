@@ -1,0 +1,2 @@
+hostname = api.m.jd.com, dns.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/Nobodyxxxxx/Quantumult-X/refs/heads/main/rewrite
