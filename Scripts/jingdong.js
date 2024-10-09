@@ -117,7 +117,7 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
           // 底部工具栏
           if (floor?.data?.nodes?.length > 0) {
             const sortLists = [
-              "gengduoxin"
+              "gengduoxin",
               "yangzhuzhu"
               //"applezhushou", // apple助手 1-1-1
               //"lingjindouxin", // 签到领豆 1-1-2
