@@ -112,19 +112,19 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
             delete floor.data.floatLayer;
           }
         } else if (floor?.mId === "iconToolFloor") {
-          /*
+          
           // 底部工具栏
           if (floor?.data?.nodes?.length > 0) {
             const sortLists = [
               "applezhushou", // apple助手 1-1-1
-              "lingjindouxin", // 签到领豆 1-1-2
+              //"lingjindouxin", // 签到领豆 1-1-2
               "dongdongnongchangxin", // 京东农场 1-1-3
               "chongwangwang", // 宠汪汪 1-1-4
-              "kehufuwu", // 客户服务 1-2-1
+              //"kehufuwu", // 客户服务 1-2-1
               "xianzhiguanjia", // 闲置换钱 1-2-2
               "wenyisheng", // 问医生 1-2-3
-              "jijianfuwu", // 寄件服务 1-2-5
-              "zhuanzuanhongbao", // 天天赚红包 2-2-1
+              //"jijianfuwu", // 寄件服务 1-2-5
+              //"zhuanzuanhongbao", // 天天赚红包 2-2-1
               "huanletaojin" // 欢乐淘金 2-2-2
             ];
             let node = floor.data.nodes;
@@ -153,9 +153,9 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
           //   delete floor.data.bgImgInfo.bgImg;
           // }
           // 开通plus会员卡片
-          if (floor?.data?.newPlusBlackCard) {
-            delete floor.data.newPlusBlackCard;
-          }
+          //if (floor?.data?.newPlusBlackCard) {
+          // delete floor.data.newPlusBlackCard;
+          //}
         }
         newFloors.push(floor);
       }
@@ -206,19 +206,19 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
             delete floor.data.floatLayer;
           }
         } else if (floor?.mId === "iconToolFloor") {
-          /*
+          
           // 底部工具栏
           if (floor?.data?.nodes?.length > 0) {
             const sortLists = [
               "applezhushou", // apple助手 1-1-1
-              "lingjindouxin", // 签到领豆 1-1-2
+              //"lingjindouxin", // 签到领豆 1-1-2
               "dongdongnongchangxin", // 京东农场 1-1-3
               "chongwangwang", // 宠汪汪 1-1-4
-              "kehufuwu", // 客户服务 1-2-1
+              //"kehufuwu", // 客户服务 1-2-1
               "xianzhiguanjia", // 闲置换钱 1-2-2
               "wenyisheng", // 问医生 1-2-3
-              "jijianfuwu", // 寄件服务 1-2-5
-              "zhuanzuanhongbao", // 天天赚红包 2-2-1
+              //"jijianfuwu", // 寄件服务 1-2-5
+              //"zhuanzuanhongbao", // 天天赚红包 2-2-1
               "huanletaojin" // 欢乐淘金 2-2-2
             ];
             let node = floor.data.nodes;
