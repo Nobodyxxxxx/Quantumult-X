@@ -120,13 +120,13 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
               //"applezhushou", // apple助手 1-1-1
               "lingjindouxin", // 签到领豆 1-1-2
               //"dongdongnongchangxin", // 京东农场 1-1-3
-              "chongwangwang", // 宠汪汪 1-1-4
+              //"chongwangwang", // 宠汪汪 1-1-4
               "kehufuwu", // 客户服务 1-2-1
-              "xianzhiguanjia", // 闲置换钱 1-2-2
-              "wenyisheng", // 问医生 1-2-3
+              //"xianzhiguanjia", // 闲置换钱 1-2-2
+              //"wenyisheng", // 问医生 1-2-3
               "jijianfuwu", // 寄件服务 1-2-5
               "zhuanzuanhongbao", // 天天赚红包 2-2-1
-              "huanletaojin" // 欢乐淘金 2-2-2
+              //"huanletaojin" // 欢乐淘金 2-2-2
             ];
             let node = floor.data.nodes;
             if (node?.[0]?.length > 0) {
