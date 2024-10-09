@@ -1,0 +1,14 @@
+#!name=广告拦截合集-重写
+#!desc=(R)针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=@Nobodyxxxxx,原作者@奶思
+#!homepage=https://github.com/Nobodyxxxxx/Quantumult-X
+#!raw-url=https://github.com/Nobodyxxxxx/Quantumult-X/Rewrite/App-ADS
+#!system = iOS, iPadOS
+#!date=2024-10-9
+#!support=支持约款APP
+#############################################
+# > 京东
+hostname = api.m.jd.com, dns.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js
+# 禁京东直播小窗
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
