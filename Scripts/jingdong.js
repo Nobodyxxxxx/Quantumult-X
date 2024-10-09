@@ -140,6 +140,7 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
               node[1] = node[1]
                 .filter((i) => sortLists?.includes(i?.functionId))
                 .sort((a, b) => sortLists.indexOf(a?.functionId) - sortLists.indexOf(b?.functionId));
+                node[0] = node[0].slice(0, 4);
             }
           }
   
