@@ -134,14 +134,24 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
               node[0] = node[0]
                 .filter((i) => sortLists?.includes(i?.functionId))
                 .sort((a, b) => sortLists.indexOf(a?.functionId) - sortLists.indexOf(b?.functionId));
+                // 将筛选后的结果添加到 filteredIds 中
+            filteredIds = filteredIds.concat(firstGroup);
             }
             if (node?.[1]?.length > 0) {
               // 第二组四个
               node[1] = node[1]
                 .filter((i) => sortLists?.includes(i?.functionId))
                 .sort((a, b) => sortLists.indexOf(a?.functionId) - sortLists.indexOf(b?.functionId));
-                node[0] = node[0].slice(0, 4);
+                // 将筛选后的结果添加到 filteredIds 中
+            filteredIds = filteredIds.concat(firstGroup);
             }
+            // 最终保留前4个功能ID
+        if (filteredIds.length > 0) {
+            filteredIds = filteredIds.slice(0, 4); // 只保留前四个元素
+        }
+
+        // 将处理后的结果赋值回 node[0]（或其他适当的地方）
+        node[0] = filteredIds; // 假设我们将结果放回第一组节点
           }
   
         } else if (floor?.mId === "orderIdFloor") {
