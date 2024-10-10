@@ -28,28 +28,7 @@ let obj = JSON.parse($response.body);
         //"noticeFloor", // 顶部横幅
       ];
       if (items?.includes(floor?.mId)) {
-        continue;
-      } else {
-        if (floor?.mId === "basefloorinfo") {
-          // 弹窗
-          if (floor?.data?.commonPopup) {
-            delete floor.data.commonPopup;
-          }
-          // 弹窗
-          if (floor?.data?.commonPopup_dynamic) {
-            delete floor.data.commonPopup_dynamic;
-          }
-          // 底部会员续费横幅
-          if (floor?.data?.commonTips?.length > 0) {
-            floor.data.commonTips = [];
-          }
-          // 弹窗
-          if (floor?.data?.commonWindows?.length > 0) {
-            floor.data.commonWindows = [];
-          }
-          // 右下角动图
-          if (floor?.data?.floatLayer) {
-            delete floor.data.floatLayer;
-          }
+        continue;}
         }
-      }
+      } 
+    }
