@@ -17,8 +17,8 @@ let obj = JSON.parse($response.body);
         "newStyleAttentionCard", // 新版关注的频道
         "keyToolsFloor", // 浏览记录 
         "newWalletIdFloor", // 我的钱包 
-        "iconToolFloor", // 底部工具栏 
-        "newsFloor", // 京东快讯 
+        //"iconToolFloor", // 底部工具栏 
+        //"newsFloor", // 京东快讯 
          "supportFloors"
       
         //"bigSaleFloor", // 双十一
