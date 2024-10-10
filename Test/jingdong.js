@@ -52,3 +52,4 @@ let obj = JSON.parse($response.body);
             delete floor.data.floatLayer;
           }
         }
+      }
