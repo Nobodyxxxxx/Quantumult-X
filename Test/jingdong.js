@@ -13,13 +13,13 @@ if (url.includes("functionId=personinfoBusiness")) {
             //"basefloorinfo",
             //"userinfo",
             //"orderIdFloor", // 我的订单
-            "recommendfloor", // 我的推荐
-            "newStyleAttentionCard", // 新版关注的频道
-            "keyToolsFloor", // 浏览记录
-            "newWalletIdFloor", // 我的钱包
+            //"recommendfloor", // 我的推荐
+            //"newStyleAttentionCard", // 新版关注的频道
+            //"keyToolsFloor", // 浏览记录
+            //"newWalletIdFloor", // 我的钱包
             //"iconToolFloor", // 底部工具栏
             //"newsFloor", // 京东快讯
-            "supportFloors"
+            //"supportFloors"
             //"bigSaleFloor", // 双十一
             //"buyOften", // 常买常逛
             //"newAttentionCard", // 关注的频道
