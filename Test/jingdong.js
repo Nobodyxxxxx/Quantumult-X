@@ -10,9 +10,9 @@ if (url.includes("functionId=personinfoBusiness")) {
     if (obj?.floors?.length > 0) {
         let newFloors = [];
         const items = [
-            "basefloorinfo",
-            "userinfo",
-            "orderIdFloor", // 我的订单
+            //"basefloorinfo",
+            //"userinfo",
+            //"orderIdFloor", // 我的订单
             "recommendfloor", // 我的推荐
             "newStyleAttentionCard", // 新版关注的频道
             "keyToolsFloor", // 浏览记录
