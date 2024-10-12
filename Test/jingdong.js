@@ -27,17 +27,21 @@ function filterToolbar(floor) {
     let node = floor.data.nodes;
 
     if (node?.[0]?.length > 0) {
+      console.log("Before filtering Group 1:", JSON.stringify(node[0])); // 调试输出，查看过滤前的内容
       // 第一组十个功能，过滤并排序
       node[0] = node[0]
         .filter((i) => sortLists.includes(i?.functionId)) // 过滤非广告功能
         .sort((a, b) => sortLists.indexOf(a?.functionId) - sortLists.indexOf(b?.functionId)); // 按照 sortLists 排序
+      console.log("After filtering Group 1:", JSON.stringify(node[0])); // 调试输出，查看过滤后的内容
     }
     
     if (node?.[1]?.length > 0) {
+      console.log("Before filtering Group 2:", JSON.stringify(node[1])); // 调试输出，查看过滤前的内容
       // 第二组四个功能，过滤并排序
       node[1] = node[1]
         .filter((i) => sortLists.includes(i?.functionId)) // 过滤非广告功能
         .sort((a, b) => sortLists.indexOf(a?.functionId) - sortLists.indexOf(b?.functionId)); // 按照 sortLists 排序
+      console.log("After filtering Group 2:", JSON.stringify(node[1])); // 调试输出，查看过滤后的内容
     }
   }
 }
