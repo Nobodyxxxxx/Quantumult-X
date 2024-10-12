@@ -58,8 +58,8 @@ if (url.includes("functionId=personinfoBusiness")) {
 }
 // 需要移除的标题
 const removeTitles = [
-  "金条借款",
-  "京东财富"
+ "wodebaitiao", // "金条借款"
+ "jijin" //"京东财富"
 ];
 // 过滤掉 walletList 中带有特定标题的项目
 function filterWalletList(data) {
