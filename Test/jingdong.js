@@ -10,6 +10,7 @@ const removeList = [
   "wenyishengxin",       // 问医生
   "wangwangleyuan",    // 汪汪庄园
   "zhuanzuanhongbao", // 天天赚红包
+  "lingjifen",
   "wanyiwan",
   "xianzhiguanjia",
   "doudizhu",
