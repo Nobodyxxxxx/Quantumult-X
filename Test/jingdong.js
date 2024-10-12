@@ -7,8 +7,12 @@ let obj = JSON.parse($response.body);
 const removeList = [
   "applezhushou",     // Apple助手
   "dongdongnongchangxin", // 东东农场
-  "wenyisheng",       // 问医生
+  "wenyishengxin",       // 问医生
   "chongwangwang",    // 宠汪汪庄园
+  "wanyiwan",
+  "doudizhu",
+  "huanletaojin",
+  "yangzhuzhu"
 ];
 
 // 过滤节点
