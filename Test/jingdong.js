@@ -13,9 +13,6 @@ if (url.includes("/client.action?functionId=readCustomSurfaceList")) {
     // 同样过滤掉 normal 模式下的“逛”和“新品”
     obj.result.modeMap.normal.navigationAll = obj.result.modeMap.normal.navigationAll.filter((i) => !/(find|new)/.test(i?.functionId));
   }
-  
-  // 其他可能需要删除的数据项
-  delete obj.result.top_skin; // 删除顶部背景图
 }
 
 $done({ body: JSON.stringify(obj) });
