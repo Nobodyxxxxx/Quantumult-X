@@ -23,14 +23,28 @@ const removeList = [
 
 // 过滤并合并按钮到一行
 function filterAndAlign(floor) {
-  if (floor?.nodes?.length > 0) {
-    let nodes = floor.nodes.flat();  // 合并多行的按钮为一个数组
+  if (floor?.data?.nodes?.length > 0) {
+    let node = floor.data.nodes;
 
     // 移除广告元素
-    nodes = nodes.filter((item) => !removeList.includes(item.functionId));
+    node[0] = node[0].filter((i) => !removeList.includes(i?.functionId));
 
-    // 将过滤后的按钮重新放入nodes，并只保留一行
-    floor.nodes = [nodes];
+    // 如果第二行存在按钮，合并它们到第一行
+    if (node[1]?.length > 0) {
+      node[0] = [...node[0], ...node[1]];  // 合并到第一行
+      node[1] = [];  // 清空第二行
+    }
+
+    // 如果存在其他多行布局样式字段，清除它
+    if (floor.data?.style) {
+      delete floor.data.style;  // 删除任何可能导致多行显示的样式
+    }
+
+    // 强制显示为一行
+    if (node[0].length > 0) {
+      // 你可以根据需要调整最大按钮显示数量
+      floor.data.nodes = [node[0].slice(0, 3)];  // 将按钮放到一行
+    }
   }
 }
 
