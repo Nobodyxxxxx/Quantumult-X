@@ -21,6 +21,11 @@ const removeList = [
   "yangzhuzhu",
   "kehufuwu"
 ];
+// 需要移除的标题
+const removeTitles = [
+  "金条借款",
+  "京东财富"
+];
 
 // 过滤并合并按钮到一行
 function filterAndAlign(floor) {
@@ -48,7 +53,14 @@ function filterAndAlign(floor) {
     }
   }
 }
-
+// 过滤掉 walletList 中带有特定标题的项目
+function filterWalletList(data) {
+  if (data?.walletList?.length > 0) {
+    data.walletList = data.walletList.filter((item) => 
+      !(item.title && removeTitles.includes(item.title.value))
+    );
+  }
+}
 // 确保这是正确的 API 请求
 if (url.includes("functionId=personinfoBusiness")) {
   if (obj?.floors?.length > 0) {
@@ -57,6 +69,10 @@ if (url.includes("functionId=personinfoBusiness")) {
     });
   }
 }
-
+// 过滤 walletList
+  if (obj?.data) {
+    filterWalletList(obj.data);
+  }
+}
 // 返回修改后的响应体
 $done({ body: JSON.stringify(obj) });
