@@ -1,6 +1,11 @@
-// 获取响应体
-const body = $response.body;
-let obj = JSON.parse(body);
+// 获取请求的 URL
+const url = $request.url;
+
+// 如果响应体为空，则直接结束脚本
+if (!$response.body) $done({});
+
+// 解析响应体
+let obj = JSON.parse($response.body);
 
 // 广告元素的关键词，通常以广告的功能ID或相关描述为标识
 const removeKeywords = ["dongdongnongchangxin", "wanyiwan", "askDoctor", "appleAssistant", "wangwangzhuangyuan", "东东农场", "玩一玩", "问医生", "Apple助手", "汪汪庄园"];
@@ -27,8 +32,11 @@ function removeAds(node) {
     }
 }
 
-// 移除广告
-removeAds(obj);
+// 检查请求的 functionId 是否为 personinfoBusiness
+if (url.includes("functionId=personinfoBusiness")) {
+    // 移除广告
+    removeAds(obj);
+}
 
 // 将修改后的对象重新转换为 JSON 字符串并返回
 $done({ body: JSON.stringify(obj) });
