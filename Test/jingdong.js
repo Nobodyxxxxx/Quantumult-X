@@ -1,37 +1,17 @@
-//@RuCu6
-// 2024-10-10
+// 去除特定广告元素
+const body = $response.body;
+let obj = JSON.parse(body);
 
-const url = $request.url;
-if (!$response.body) $done({});
-let obj = JSON.parse($response.body);
+// 过滤掉东东农场、玩一玩、问医生、Apple助手和汪汪庄园
+const removeIds = ["dongdongnongchangxin", "wanyiwan", "askDoctor", "appleAssistant", "wangwangzhuangyuan"];
 
-if (url.includes("functionId=personinfoBusiness")) {
-    // 个人页面
-    if (obj?.floors?.length > 0) {
-        let newFloors = [];
-        const items = [
-            //"basefloorinfo",
-            //"userinfo",
-            //"orderIdFloor", // 我的订单
-            //"recommendfloor", // 我的推荐
-            //"newStyleAttentionCard", // 新版关注的频道
-            //"keyToolsFloor", // 浏览记录
-            //"newWalletIdFloor", // 我的钱包
-            //"iconToolFloor", // 底部工具栏
-            //"newsFloor", // 京东快讯
-            //"supportFloors"
-            //"bigSaleFloor", // 双十一
-            //"buyOften", // 常买常逛
-            //"newAttentionCard", // 关注的频道
-            //"newBigSaleFloor", // 双十一
-            //"noticeFloor", // 顶部横幅
-        ];
-        for (let floor of obj.floors) {
-            if (!items.includes(floor?.mId)) {
-                newFloors.push(floor); // 将未过滤的楼层添加到 newFloors 中
-            }
-        }
-        obj.floors = newFloors; // 将过滤后的楼层赋值回去
-    }
+// 遍历并删除指定的广告元素
+if (obj && obj.floors) {
+  obj.floors = obj.floors.filter(floor => {
+    // 删除包含指定广告 ID 的楼层
+    return !removeIds.includes(floor.bId);
+  });
 }
 
+// 将过滤后的内容返回
+$done({ body: JSON.stringify(obj) });
