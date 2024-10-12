@@ -18,7 +18,8 @@ const removeList = [
   "xianzhiguanjia",
   "doudizhu",
   "huanletaojin",
-  "yangzhuzhu"
+  "yangzhuzhu",
+  "kehufuwu"
 ];
 
 // 过滤并合并按钮到一行
