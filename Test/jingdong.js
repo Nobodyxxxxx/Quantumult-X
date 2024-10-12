@@ -8,7 +8,7 @@ const removeList = [
   "applezhushou",     // Apple助手
   "dongdongnongchangxin", // 东东农场
   "wenyishengxin",       // 问医生
-  "chongwangwang",    // 宠汪汪庄园
+  "wangwangleyuan",    // 汪汪庄园
   "zhuanzuanhongbao", // 天天赚红包
   "wanyiwan",
   "xianzhiguanjia",
