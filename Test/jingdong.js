@@ -56,6 +56,8 @@ if (url.includes("functionId=personinfoBusiness")) {
     });
   }
 }
+else if (floor?.mId === "keyToolsFloor") {
+if (floor?.data?.nodes?.length > 0) {
 // 需要移除的标题
 const removeTitles = [
  "wodebaitiao", // "金条借款"
@@ -65,9 +67,10 @@ const removeTitles = [
 function filterWalletList(data) {
   if (data?.walletList?.length > 0) {
     data.walletList = data.walletList.filter((item) => 
-      !(item.title && removeTitles.includes(item.title.value))
+      !(item.title && removeTitles.includes(item.functionId))
     );
   }
+}
 }
 // 返回修改后的响应体
 $done({ body: JSON.stringify(obj) });
