@@ -10,9 +10,9 @@ const removeList = [
   "wenyishengxin",       // 问医生
   "wangwangleyuan",    // 汪汪庄园
   "zhuanzuanhongbao", // 天天赚红包
-"niudanshangdian",
-"gengduoxin",
-"jijianfuwu",
+  "niudanshangdian",
+  "gengduoxin",
+  "jijianfuwu",
   "lingjifen",
   "wanyiwan",
   "xianzhiguanjia",
@@ -43,7 +43,7 @@ function filterAndAlign(floor) {
     // 强制显示为一行
     if (node[0].length > 0) {
       // 你可以根据需要调整最大按钮显示数量
-      floor.data.nodes = [node[0].slice(0, 3)];  // 将按钮放到一行
+      floor.data.nodes = [node[0].slice(0, 1)];  // 将按钮放到一行
     }
   }
 }
