@@ -17,4 +17,4 @@ if (body.blocks && body.blocks.length > 1) {
   delete body.blocks[1];
 }
 
-$done({body: JSON.stringify(bo
+$done({body: JSON.stringify(body)});
